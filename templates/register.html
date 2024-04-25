@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url</title>
+</head>
+<body>
+    <h1>Enter Details</h1>
+    <form method="post" action="submit" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h2>Personal Details</h2>
+        <br>
+        <label>Enter full name:</label>
+        <input type="text" class="name" name="name" required>
+        <br>
+        <label>Enter current role:</label>
+        <input type="text" class="role" name="role" required>
+        <br>
+        <label>Upload your photo:</label>
+        <input type="file" class="dp" name="dp" accept="image/*" required>
+        <br>
+        <label>Enter phone number:</label>
+        <input type="tel" class="phone" name="phone" pattern="[1-9]{1}[0-9]{9}" required>
+        <br>
+        <label>Enter email id:</label>
+        <input type="email" class="email" name="email" required>
+        <br>
+        <label>Enter district:</label>
+        <input type="text" class="district" name="district" required>
+        <br>
+        <label>Enter state:</label>
+        <input type="text" class="state" name="state" required>
+        <br>
+        <label>Enter social media link:</label>
+        <input type="url" class="link" name="link" required>
+        <br>
+        <label>Enter your professional summary:</label>
+        <textarea class="profile" name="profile" required></textarea>
+        <br>
+        <br>
+        <h2>Education</h2>
+        <br>
+        <h3>Most Recent</h3>
+        <br>
+        <label>Enter qualification:</label>
+        <input type="text" class="recent_edu" name="recent_edu" required>
+        <br>
+        <label>Enter college name:</label>
+        <input type="text" class="recent_clg" name="recent_clg" required>
+        <br>
+        <label>Enter duration:</label>
+        <input type="number" class="recent_start" name="recent_start" placeholder="Start year" required>
+        <label>-</label>
+        <input type="number" class="recent_stop" name="recent_stop" placeholder="End year">
+        <br>
+        <label>Enter CGPA out of 10:</label>
+        <input type="number" class="recent_cgpa" name="recent_cgpa" required>
+        <br>
+        <h3>Second Recent</h3>
+        <br>
+        <label>Enter qualification:</label>
+        <input type="text" class="s_recent_edu" name="s_recent_edu" required>
+        <br>
+        <label>Enter school/college name:</label>
+        <input type="text" class="s_recent_clg" name="s_recent_clg" required>
+        <br>
+        <label>Enter duration:</label>
+        <input type="number" class="s_recent_start" name="s_recent_start" placeholder="Start year" required>
+        <label>-</label>
+        <input type="number" class="s_recent_stop" name="s_recent_stop" placeholder="End year" required>
+        <br>
+        <label>Enter percentage:</label>
+        <input type="number" class="s_recent_per" name="s_recent_per" required>
+        <br>
+        <h3>Third Recent</h3>
+        <br>
+        <label>Enter qualification:</label>
+        <input type="text" class="t_recent_edu" name="t_recent_edu" required>
+        <br>
+        <label>Enter school/college name:</label>
+        <input type="text" class="t_recent_clg" name="t_recent_clg" required>
+        <br>
+        <label>Enter duration:</label>
+        <input type="number" class="t_recent_start" name="t_recent_start" placeholder="Start year" required>
+        <label>-</label>
+        <input type="number" class="t_recent_stop" name="t_recent_stop" placeholder="End year" required>
+        <br>
+        <label>Enter percentage:</label>
+        <input type="number" class="t_recent_per" name="t_recent_per" required>
+        <br>
+        <br>
+        <h2>Skills</h2>
+        <br>
+        <label>Enter technical skills separated by commas:</label>
+        <textarea class="tech" name="tech" required></textarea>
+        <br>
+        <label>Enter soft skills separated by commas:</label>
+        <textarea class="soft" name="soft" required></textarea>
+        <br>
+        <br>
+        <h2>Experience</h2>
+        <br>
+        <h3>Experience 1</h3>
+        <br>
+        <label>Enter job title:</label>
+        <input type="text" class="job1" name="job1" required>
+        <br>
+        <label>Enter company name:</label>
+        <input type="text" class="comp1" name="comp1" required>
+        <br>
+        <label>Enter duration:</label>
+        <input type="month" class="dur1_start" name="dur1_start" required>
+        <label>-</label>
+        <input type="month" class="dur1_stop" name="dur1_stop" required>
+        <br>
+        <label>Mode:</label>
+        <select class="mod1" name="mod1" required>
+            <option>Online</option>
+            <option>Offline</option>
+            <option>Hybrid</option>
+        </select>
+        <br>
+        <label>Enter description of job:</label>
+        <textarea class="jd1" name="jd1" required></textarea>
+        <br>
+        <label>Enter technology used in job:</label>
+        <input type="text" class="jt1" name="jt1" required>
+        <br>
+        <h3>Experience 2</h3>
+        <br>
+        <label>Enter job title:</label>
+        <input type="text" class="job2" name="job2">
+        <br>
+        <label>Enter company name:</label>
+        <input type="text" class="comp2" name="comp2">
+        <br>
+        <label>Enter duration:</label>
+        <input type="month" class="dur2_start" name="dur2_start">
+        <label>-</label>
+        <input type="month" class="dur2_stop" name="dur2_stop">
+        <br>
+        <label>Mode:</label>
+        <select class="mod2" name="mod2">
+            <option>Online</option>
+            <option>Offline</option>
+            <option>Hybrid</option>
+        </select>
+        <br>
+        <label>Enter description of job:</label>
+        <textarea class="jd2" name="jd2"></textarea>
+        <br>
+        <label>Enter technology used in job:</label>
+        <input type="text" class="jt2" name="jt2">
+        <br>
+        <h3>Experience 3</h3>
+        <br>
+        <label>Enter job title:</label>
+        <input type="text" class="job3" name="job3">
+        <br>
+        <label>Enter company name:</label>
+        <input type="text" class="comp3" name="comp3">
+        <br>
+        <label>Enter duration:</label>
+        <input type="month" class="dur3_start" name="dur3_start">
+        <label>-</label>
+        <input type="month" class="dur3_stop" name="dur3_stop">
+        <br>
+        <label>Mode:</label>
+        <select class="mod3" name="mod3">
+            <option>Online</option>
+            <option>Offline</option>
+            <option>Hybrid</option>
+        </select>
+        <br>
+        <label>Enter description of job:</label>
+        <textarea class="jd3" name="jd3"></textarea>
+        <br>
+        <label>Enter technology used in job:</label>
+        <input type="text" class="jt3" name="jt3">
+        <br>
+        <h3>Experience 4</h3>
+        <br>
+        <label>Enter job title:</label>
+        <input type="text" class="job4" name="job4">
+        <br>
+        <label>Enter company name:</label>
+        <input type="text" class="comp4" name="comp4">
+        <br>
+        <label>Enter duration:</label>
+        <input type="month" class="dur4_start" name="dur4_start">
+        <label>-</label>
+        <input type="month" class="dur4_stop" name="dur4_stop">
+        <br>
+        <label>Mode:</label>
+        <select class="mod4" name="mod4">
+            <option>Online</option>
+            <option>Offline</option>
+            <option>Hybrid</option>
+        </select>
+        <br>
+        <label>Enter description of job:</label>
+        <textarea class="jd4" name="jd4"></textarea>
+        <br>
+        <label>Enter technology used in job:</label>
+        <input type="text" class="jt4" name="jt4">
+        <br>
+        <h3>Experience 5</h3>
+        <br>
+        <label>Enter job title:</label>
+        <input type="text" class="job5" name="job5">
+        <br>
+        <label>Enter company name:</label>
+        <input type="text" class="comp5" name="comp5">
+        <br>
+        <label>Enter duration:</label>
+        <input type="month" class="dur5_start" name="dur5_start">
+        <label>-</label>
+        <input type="month" class="dur5_stop" name="dur5_stop">
+        <br>
+        <label>Mode:</label>
+        <select class="mod5" name="mod5">
+            <option>Online</option>
+            <option>Offline</option>
+            <option>Hybrid</option>
+        </select>
+        <br>
+        <label>Enter description of job:</label>
+        <textarea class="jd5" name="jd5"></textarea>
+        <br>
+        <label>Enter technology used in job:</label>
+        <input type="text" class="jt5" name="jt5">
+        <br>
+        <br>
+        <h2>Projects</h2>
+        <br>
+        <h3>Project 1</h3>
+        <br>
+        <label>Enter project name:</label>
+        <input type="text" class="pro1" name="pro1" required>
+        <br>
+        <label>Enter duration:</label>
+        <input type="month" class="pro1_start" name="pro1_start" required>
+        <label>-</label>
+        <input type="month" class="pro1_stop" name="pro1_stop" required>
+        <br>
+        <label>Enter description of project:</label>
+        <textarea class="pro1_desc" name="pro1_desc" required></textarea>
+        <br>
+        <label>Enter technology used in project:</label>
+        <input type="text" class="pro1_tech" name="pro1_tech" required>
+        <br>
+        <h3>Project 2</h3>
+        <br>
+        <label>Enter project name:</label>
+        <input type="text" class="pro2" name="pro2">
+        <br>
+        <label>Enter duration:</label>
+        <input type="month" class="pro2_start" name="pro2_start">
+        <label>-</label>
+        <input type="month" class="pro2_stop" name="pro2_stop">
+        <br>
+        <label>Enter description of project:</label>
+        <textarea class="pro2_desc" name="pro2_desc"></textarea>
+        <br>
+        <label>Enter technology used in project:</label>
+        <input type="text" class="pro2_tech" name="pro2_tech">
+        <br>
+        <h3>Project 3</h3>
+        <br>
+        <label>Enter project name:</label>
+        <input type="text" class="pro3" name="pro3">
+        <br>
+        <label>Enter duration:</label>
+        <input type="month" class="pro3_start" name="pro3_start">
+        <label>-</label>
+        <input type="month" class="pro3_stop" name="pro3_stop">
+        <br>
+        <label>Enter description of project:</label>
+        <textarea class="pro3_desc" name="pro3_desc"></textarea>
+        <br>
+        <label>Enter technology used in project:</label>
+        <input type="text" class="pro3_tech" name="pro3_tech">
+        <br>
+        <h3>Project 4</h3>
+        <br>
+        <label>Enter project name:</label>
+        <input type="text" class="pro4" name="pro4">
+        <br>
+        <label>Enter duration:</label>
+        <input type="month" class="pro4_start" name="pro4_start">
+        <label>-</label>
+        <input type="month" class="pro4_stop" name="pro4_stop">
+        <br>
+        <label>Enter description of project:</label>
+        <textarea class="pro4_desc" name="pro4_desc"></textarea>
+        <br>
+        <label>Enter technology used in project:</label>
+        <input type="text" class="pro4_tech" name="pro4_tech">
+         <br>
+        <h3>Project 5</h3>
+        <br>
+        <label>Enter project name:</label>
+        <input type="text" class="pro5" name="pro5">
+        <br>
+        <label>Enter duration:</label>
+        <input type="month" class="pro5_start" name="pro5_start">
+        <label>-</label>
+        <input type="month" class="pro5_stop" name="pro5_stop">
+        <br>
+        <label>Enter description of project:</label>
+        <textarea class="pro5_desc" name="pro5_desc"></textarea>
+        <br>
+        <label>Enter technology used in project:</label>
+        <input type="text" class="pro5_tech" name="pro5_tech">
+        <br>
+        <br>
+        <h2>Certifications</h2>
+        <br>
+        <label>Enter name of certificate 1:</label>
+        <input type="text" class="c1" name="c1" required>
+        <br>
+        <label>Enter name of certificate 2:</label>
+        <input type="text" class="c2" name="c2">
+        <br>
+        <label>Enter name of certificate 3:</label>
+        <input type="text" class="c3" name="c3">
+        <br>
+        <label>Enter name of certificate 4:</label>
+        <input type="text" class="c4" name="c4">
+        <br>
+        <label>Enter name of certificate 5:</label>
+        <input type="text" class="c5" name="c5">
+        <br>
+        <label>Enter name of certificate 6:</label>
+        <input type="text" class="c6" name="c6">
+        <br>
+        <label>Enter name of certificate 7:</label>
+        <input type="text" class="c7" name="c7">
+        <br>
+        <label>Enter name of certificate 8:</label>
+        <input type="text" class="c8" name="c8">
+        <br>
+        <label>Enter name of certificate 9:</label>
+        <input type="text" class="c9" name="c9">
+        <br>
+        <label>Enter name of certificate 10:</label>
+        <input type="text" class="c10" name="c10">
+        <br>
+        <br>
+        <h2>Credentials</h2>
+        <br>
+        <label>Enter username:</label>
+        <input type="text" class="username" name="username" required>
+        <br>
+        <label>Enter password:</label>
+        <input type="text" class="password" name="password" required>
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>

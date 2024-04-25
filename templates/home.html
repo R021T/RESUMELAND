@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url</title>
+</head>
+<body>
+    <h1>URL APP</h1>
+    <label>User ID:</label>
+    <input type="text" value="{{uid}}" readonly>
+    <br>
+    <br>
+    <form action="add">
+        {% csrf_token %}
+        <input type="text" class="name" name="name" placeholder="Enter job name">
+        <input type="url" class="url" name="url" placeholder="Enter your url">
+        <input type="submit">
+    </form>
+    {% for name in response %}
+        <div>
+            <form action="view">
+                {% csrf_token %}
+                <input type="text" class="job" name="job" value="{{name}}" readonly>
+                <input type="submit" value="View">
+            </form>
+        </div>
+    {% endfor %}
+</body>
+</html>

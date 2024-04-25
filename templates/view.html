@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url</title>
+</head>
+<body>
+    {% for line in response %}
+        <p>{{line}}</p>
+    {% endfor %}
+    <a href="media/{{resume}}" download="">
+        <img src="media/{{resume}}" style="width: 30%; height: auto;">
+    </a>
+</body>
+</html>
