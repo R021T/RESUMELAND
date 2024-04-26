@@ -1,7 +1,7 @@
-# Resume Customizer
+# RESUMELAND
 
 ## Description
-The Resume Customizer project simplifies the process of creating personalized resumes tailored to specific job roles. This web application, built using Django, enables users to generate customized resumes by pasting the job link into the input box. The backend compares the user's profile information provided during signup with the job requirements extracted from the link, ensuring the generated resume aligns with the user's skills and experiences.
+The Resumeland project simplifies the process of creating personalized resumes tailored to specific job roles. This web application, built using Django, enables users to generate customized resumes by pasting the job link into the input box. The backend compares the user's profile information provided during signup with the job requirements extracted from the link, ensuring the generated resume aligns with the user's skills and experiences.
 
 ## Features
 - **Job Link Input:** Users paste the job link into the input box to trigger the resume generation process.
