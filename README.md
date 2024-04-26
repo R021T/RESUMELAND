@@ -3,6 +3,10 @@
 ## Description
 The Resumeland project simplifies the process of creating personalized resumes tailored to specific job roles. This web application, built using Django, enables users to generate customized resumes by pasting the job link into the input box. The backend compares the user's profile information provided during signup with the job requirements extracted from the link, ensuring the generated resume aligns with the user's skills and experiences.
 
+## Team Roles
+- **Rohit C (Full Stack Developer):** Led the development of both frontend and backend aspects of the project, ensuring seamless integration and functionality.
+- **Vishnu Sudheer (Web Scraping Expert):** Implemented web scraping techniques to extract job requirements from the provided links, enhancing the resume customization process.
+
 ## Features
 - **Job Link Input:** Users paste the job link into the input box to trigger the resume generation process.
 - **Tailored Resume Generation:** Based on the job requirements extracted from the provided link, the website generates a personalized resume.
